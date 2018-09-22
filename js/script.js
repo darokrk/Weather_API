@@ -18,6 +18,8 @@ function weatherSearch() {
         if (this.status === 200) {
             var json = JSON.parse(this.response);
             insertData(json);
+        } else if (this.status == 400) {
+            alert('Please insert city name first');
         }
     })
     xhr.send();

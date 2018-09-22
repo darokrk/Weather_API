@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin-ext');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.main {
+    background: url('../images/background.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+
+    .container {
+        max-width: 60vw;
+        margin: 0 auto;
+        text-align: center;
+        .main__header {
+            font-size: 3rem;
+            color: #222831;
+            &::after {
+                content: '';
+                border: 1px solid #222831;
+                width: 55%;
+                display: block;
+                margin: auto;
+            }
+        }
+        .input__box {
+            width: 50%;
+            margin: auto;
+            .input__text {
+                font-size: 1.2rem;
+                vertical-align: bottom;
+                padding: 10px;
+                border-radius: 10px 0 0 10px;
+                border: 2px solid #00adb5;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .input__btn {
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+                padding: 10px;
+                height: 46px;
+                margin-left: -10px;
+                border: none;
+                border-radius: 0 10px 10px 0;
+                background: #00adb5;
+                color: #fff;
+                &:focus {
+                    outline: none;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        .weather__box {
+            font-size: 24px;
+            color: #222831;
+            .icon__box {
+                padding-top: 25px;
+                .icon__img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+            .city__text {
+                font-weight: bold;
+                padding: 10px;
+                .city__text--span {
+                    color: #20003D;
+                    font-style: italic;
+                }
+            }
+            .temp__info {
+                padding: 10px;
+                .temp__info--span {
+                    padding: 10px 20px;
+                    background: #20003D;
+                    color: #fff;
+                    border-radius: 20px;
+                }
+            }
+            .wind__info {
+                padding: 10px;
+            }
+            .coord__link {
+                padding: 10px;
+            }
+        }
+    }
+}

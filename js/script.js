@@ -3,6 +3,7 @@ var id = 'f898e87d753c1e5de2cf49473bed40c5';
 var content = document.getElementById('weather__box');
 var inputElem = document.getElementById('input');
 var btnSearch = document.getElementById('btn-search');
+var cityContainer = document.createElement('div');
 
 btnSearch.addEventListener('click', weatherSearch);
 inputElem.addEventListener('keypress', function (e) {
@@ -37,7 +38,6 @@ function insertData(data) {
 }
 
 function insertCityData(data) {
-    var cityContainer = document.createElement('div');
     var cityInfo = document.createElement('p');
     var citySpan = document.createElement('span');
     cityContainer.classList.add('city__box');
@@ -94,6 +94,7 @@ function insertWindData(data) {
 
 function insertCordData(data) {
     var coordParagraph = document.createElement('p');
+    coordParagraph.classList.add('coord__info');
     coordParagraph.innerHTML = 'coords';
     var coordLink = document.createElement('a');
     coordLink.classList.add('coord__link');

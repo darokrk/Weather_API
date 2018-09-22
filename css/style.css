@@ -5,13 +5,13 @@ body { margin: 0; padding: 0; font-family: 'Lato', sans-serif; }
 
 .main { background: url("../images/background.jpg") no-repeat center; background-size: cover; min-height: 100vh; overflow: hidden; }
 
-.main .container { max-width: 60vw; margin: 0 auto; text-align: center; }
+.main .container { max-width: 80vw; margin: 0 auto; text-align: center; }
 
 .main .container .main__header { font-size: 3rem; color: #222831; }
 
-.main .container .main__header::after { content: ''; border: 1px solid #222831; width: 55%; display: block; margin: auto; }
+.main .container .main__header::after { content: ''; border: 1px solid #222831; width: 40%; display: block; margin: 10px auto; }
 
-.main .container .input__box { width: 50%; margin: auto; }
+.main .container .input__box { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: auto; }
 
 .main .container .input__box .input__text { font-size: 1.2rem; vertical-align: bottom; padding: 10px; border-radius: 10px 0 0 10px; border: 2px solid #00adb5; }
 
@@ -39,4 +39,10 @@ body { margin: 0; padding: 0; font-family: 'Lato', sans-serif; }
 
 .main .container .weather__box .wind__info { padding: 10px; }
 
-.main .container .weather__box .coord__link { padding: 10px; }
+.main .container .weather__box .coord__info { padding: 10px; }
+
+.main .container .weather__box .coord__info .coord__link { padding: 10px; }
+
+@media (max-width: 412px) { .main .container .input__box { -ms-flex-direction: column; flex-direction: column; }
+  .main .container .input__box .input__text { border-radius: 10px; margin: 5px; text-align: center; font-size: 20px; }
+  .main .container .input__box .input__btn { border-radius: 10px; margin: 5px; width: 50%; font-size: 20px; } }

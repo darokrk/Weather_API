@@ -17,33 +17,42 @@ body {
     overflow: hidden;
 
     .container {
-        max-width: 60vw;
+        max-width: 80vw;
         margin: 0 auto;
         text-align: center;
+
         .main__header {
             font-size: 3rem;
             color: #222831;
+
             &::after {
                 content: '';
                 border: 1px solid #222831;
-                width: 55%;
+                width: 40%;
                 display: block;
-                margin: auto;
+                margin: 10px auto;
             }
         }
+
         .input__box {
-            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             margin: auto;
+
             .input__text {
                 font-size: 1.2rem;
                 vertical-align: bottom;
                 padding: 10px;
                 border-radius: 10px 0 0 10px;
                 border: 2px solid #00adb5;
+
                 &:focus {
                     outline: none;
                 }
             }
+
             .input__btn {
                 font-size: 1rem;
                 letter-spacing: 0.5px;
@@ -54,34 +63,43 @@ body {
                 border-radius: 0 10px 10px 0;
                 background: #00adb5;
                 color: #fff;
+
                 &:focus {
                     outline: none;
                 }
+
                 &:hover {
                     cursor: pointer;
                 }
             }
         }
+
         .weather__box {
             font-size: 24px;
             color: #222831;
+
             .icon__box {
                 padding-top: 25px;
+
                 .icon__img {
                     width: 70px;
                     height: 70px;
                 }
             }
+
             .city__text {
                 font-weight: bold;
                 padding: 10px;
+
                 .city__text--span {
                     color: #20003D;
                     font-style: italic;
                 }
             }
+
             .temp__info {
                 padding: 10px;
+
                 .temp__info--span {
                     padding: 10px 20px;
                     background: #20003D;
@@ -89,11 +107,40 @@ body {
                     border-radius: 20px;
                 }
             }
+
             .wind__info {
                 padding: 10px;
             }
-            .coord__link {
+
+            .coord__info {
                 padding: 10px;
+
+                .coord__link {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 412px) {
+    .main {
+        .container {
+            .input__box {
+                flex-direction: column;
+                .input__text {
+                    border-radius: 10px;
+                    margin: 5px;
+                    text-align: center;
+                    font-size: 20px;
+                }
+
+                .input__btn {
+                    border-radius: 10px;
+                    margin: 5px;
+                    width: 50%;
+                    font-size: 20px;
+                }
             }
         }
     }

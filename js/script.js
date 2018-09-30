@@ -2,17 +2,15 @@ var url = 'https://api.openweathermap.org/data/2.5/weather?q=';
 var id = 'f898e87d753c1e5de2cf49473bed40c5';
 var content = document.getElementById('weather__box');
 var inputElem = document.getElementById('input');
-var btnSearch = document.getElementById('btn-search');
+
+var form = document.getElementById('form');
 var cityContainer = document.createElement('div');
 
-btnSearch.addEventListener('click', weatherSearch);
-inputElem.addEventListener('keypress', function (e) {
-    if (e.which == 13) {
-        weatherSearch();
-    }
-});
+form.addEventListener('submit', weatherSearch);
 
-function weatherSearch() {
+function weatherSearch(event) {
+
+    event.preventDefault();
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url + inputElem.value + '&units=metric&APPID=' + id);
     xhr.addEventListener('load', function () {
